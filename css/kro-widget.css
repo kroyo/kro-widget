@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/**
+ * Created by kroyo on 2017/12/5.
+ * 自定义组件css
+ * version  0.0.1
+ */
+/**
+ * Created by kroyo on 2017/10/19.
+ * minxin 公共方法块
+ * version 1.0.0
+ */
+body, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, select, textarea, button, th, td, menu {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+ul, dl, ol {
+  list-style: none; }
+
+img, fieldset, input[type="submit"] {
+  border: 0 none; }
+
+em {
+  font-style: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button, input[type="button"] {
+  cursor: pointer;
+  border: 0 none; }
+
+a, button, input, img {
+  -webkit-touch-callout: none; }
+
+img {
+  /*pointer-events:none;*/
+  /*禁止图片的点击事件，例如长按保存图片*/ }
+
+fieldset, img, input, button, select {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none; }
+
+a {
+  text-decoration: none; }
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Microsoft YaHei','Helvetica Neue','Helvetica','PingFang SC','Arial','Heiti SC','SimSun','sans-serif';
+  outline: 0;
+  -webkit-text-size-adjust: none; }
+
+body {
+  height: 100%;
+  margin: 0;
+  position: relative; }
+
+i, em {
+  font-style: normal;
+  text-decoration: none; }
+
+/***清除浮动***/
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix {
+  *zoom: 1; }
+
+.kro-select-wrapper {
+  position: relative;
+  width: 200px;
+  height: 40px; }
+  .kro-select-wrapper.active .kro-select-seloff {
+    -webkit-transform: rotate(180deg);
+    /* Safari 和 Chrome */
+    -moz-transform: rotate(180deg);
+    /* Firefox */
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -o-transform: rotate(180deg);
+    /* Opera */
+    transform: rotate(180deg); }
+
+.kro-select-input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0 20px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1; }
+
+.kro-select-seloff {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  background: url(../img/seloff.png) no-repeat center;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+
+.kro-select-listdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+  .kro-select-listdown .li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #7a7a7a;
+    padding-left: 10px;
+    background-color: #ffffff;
+    cursor: pointer; }
+    .kro-select-listdown .li:hover, .kro-select-listdown .li.selected {
+      background-color: #f2f2f2;
+      color: #00a0e9; }
+
+/*# sourceMappingURL=kro-widget.css.map */

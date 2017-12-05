@@ -1,0 +1,21 @@
+.project
+/.idea
+
+# dependencies
+/.sass-cache
+
+
+*.css.map
+
+
+/node_modules
+
+
+.tags
+
+*.zip
+
+package.json
+gulpfile.js
+
+/test

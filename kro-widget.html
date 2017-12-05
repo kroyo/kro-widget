@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/kro-widget.css"/>
+		<style>
+			.kro-select-wrapper{
+				margin: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="kro-select-wrapper">
+			<input class="kro-select-input" readonly type="text" name="" id="" value="" />
+			<span class="kro-select-seloff"></span>
+			<ul class="kro-select-listdown">
+				<li class="li">10000</li>
+				<li class="li">30000</li>
+				<li class="li">50000</li>
+				<li class="li">>50000</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script>
+		var kro_select = function(){
+			
+		}
+		selectlist();
+		function selectlist(){
+			var	$budget_content = $('.kro-select-wrapper'),
+				$budget_input = $('.kro-select-input'),
+				$budget_sellist = $('.kro-select-listdown'),
+				$budget_selli = $(".kro-select-listdown .li");
+			var selOff = true;
+			$budget_input.click(function(e){
+				selectAnimate();
+				e.stopPropagation();
+			});
+		
+		
+			//5.2选中选项
+			$budget_selli.click(function(e){
+			
+				//1.切换选中状态
+				$budget_selli.removeClass('selected');
+				$(this).addClass('selected');
+			
+				//2.切换input中的文本
+				$budget_input.val($(this).text());
+			
+				//3.收起下拉列表
+				selectAnimate();
+			
+				e.stopPropagation();
+			});
+		
+		
+			//5.3页面滚动时,收起下拉列表
+			$(window).scroll(function(){
+				selOff = false;
+				selectAnimate();
+			});
+			//5.4点击页面其他位置时,  收起下拉列表
+			$(document).click(function(){
+				selOff = false;
+				selectAnimate();
+			});
+			
+			
+			//下拉框动画
+			var selectAnimate = function(){
+				if(selOff){
+					$budget_content.addClass('active');
+					$budget_sellist.slideDown();
+					selOff = false;
+				}else{
+					$budget_content.removeClass('active');
+					$budget_sellist.slideUp();
+					selOff = true;
+				}
+			}
+		}
+	</script>
+</html>

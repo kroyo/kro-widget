@@ -1,0 +1,147 @@
+@charset "utf-8";
+/**
+ * Created by kroyo on 2017/10/19.
+ * minxin 公共方法块
+ * version 1.0.0
+ */
+
+
+
+
+//颜色 双色
+$s3:#333333;
+$s6:#666666;
+$s9:#999999;
+$sc:#cccccc;
+$se:#eeeeee;
+$sf:#ffffff;
+
+
+//链接颜色
+$acolor:#00a0e9;
+$red:#ee0003;
+$borcolor:#dddddd;
+
+
+//button
+$bhoverc:#4dbdf0;
+$texthcolor:#00a0e9;
+$bdisable:#99d9f6;
+
+
+$border-color:#dddddd;
+
+
+
+//字体大小
+$font12:12px;
+$font14:14px;
+$font16:16px;
+$font18:18px;
+$font24:24px;
+
+
+
+
+
+//多行文本溢出处理
+@mixin multi-line($line){
+    display: -webkit-box;
+    -webkit-line-clamp:$line;  
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+@mixin nulti-row($lineheight,$row){
+    position:relative;
+    line-height:$lineheight;
+    height:$lineheight*$row;
+    overflow:hidden;
+    &:after{
+        content:"...";
+        position:absolute;
+        bottom:0;
+        right:2px;
+        padding:0 20px 1px 45px;
+    }
+}
+
+//单行文本溢出处理
+@mixin textoverflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+//box-shadow   盒子阴影
+@mixin box-shadow($h-shadow,$v-shadow,$blur,$spread,$color){
+    -webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    -moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    -webkit-transform: translate3d(0, -2px, 0);
+    -moz-transform: translate3d(0, -2px, 0);
+    -ms-transform: translate3d(0, -2px, 0);
+    -o-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+}
+@mixin box_shadows($h-shadow,$v-shadow,$blur,$spread,$color){
+    -webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    -moz-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+    box-shadow: $h-shadow $v-shadow $blur $spread $color;
+}
+
+
+
+
+@mixin borradius($borpx){
+    -webkit-border-radius: $borpx;
+    -moz-border-radius: $borpx;
+    border-radius: $borpx;
+}
+@mixin transitions($time){
+    -webkit-transition: all $time;
+    -moz-transition: all $time;
+    -ms-transition: all $time;
+    -o-transition: all $time;
+    transition: all $time;
+}
+
+
+
+@mixin transformt($protype){
+    -webkit-transform: $protype; /* Safari 和 Chrome */
+    -moz-transform: $protype;   /* Firefox */
+    -ms-transform: $protype;    /* IE 9 */
+    -o-transform: $protype;     /* Opera */
+    transform: $protype;
+}
+
+
+
+@mixin inputplace($color){
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder { // IE10+
+        color: $color;
+    }
+    &:-moz-placeholder { // Firefox4-18
+        color: $color;
+    }
+    &::-moz-placeholder { // Firefox19+
+        color: $color;
+    }
+}
+
+
+
+@mixin fontfamily(){
+    font-family: 'Microsoft YaHei','Helvetica Neue','Helvetica','PingFang SC','Arial','Heiti SC','SimSun','sans-serif';
+}
+
+
+
+
+
