@@ -23,11 +23,12 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script type="text/javascript" src="js/kro-widget.js" ></script>
 	<script>
-		var kro_select = function(){
-			
-		}
-		selectlist();
+		
+		$('.kro-select-wrapper').select();
+		
+//		selectlist();
 		function selectlist(){
 			var	$budget_content = $('.kro-select-wrapper'),
 				$budget_input = $('.kro-select-input'),
@@ -44,7 +45,7 @@
 			$budget_selli.click(function(e){
 			
 				//1.切换选中状态
-				$budget_selli.removeClass('selected');
+				$(this).parent().find('li').removeClass('selected');
 				$(this).addClass('selected');
 			
 				//2.切换input中的文本

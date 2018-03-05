@@ -6,12 +6,22 @@
  */
 
 @import 'mixincommon';
-@import 'reset';
 
 
-
-
-
+ul,li,input{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+input{
+    border: none;
+    -webkit-touch-callout: none;
+}
 
 
 

@@ -9,77 +9,19 @@
  * minxin 公共方法块
  * version 1.0.0
  */
-body, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, select, textarea, button, th, td, menu {
+ul, li, input {
   margin: 0;
   padding: 0; }
 
 * {
   box-sizing: border-box; }
 
-ul, dl, ol {
+ul {
   list-style: none; }
 
-img, fieldset, input[type="submit"] {
-  border: 0 none; }
-
-em {
-  font-style: normal; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-button, input[type="button"] {
-  cursor: pointer;
-  border: 0 none; }
-
-a, button, input, img {
-  -webkit-touch-callout: none; }
-
-img {
-  /*pointer-events:none;*/
-  /*禁止图片的点击事件，例如长按保存图片*/ }
-
-fieldset, img, input, button, select {
+input {
   border: none;
-  padding: 0;
-  margin: 0;
-  outline-style: none; }
-
-a {
-  text-decoration: none; }
-
-html {
-  height: 100%;
-  width: 100%;
-  font-family: 'Microsoft YaHei','Helvetica Neue','Helvetica','PingFang SC','Arial','Heiti SC','SimSun','sans-serif';
-  outline: 0;
-  -webkit-text-size-adjust: none; }
-
-body {
-  height: 100%;
-  margin: 0;
-  position: relative; }
-
-i, em {
-  font-style: normal;
-  text-decoration: none; }
-
-/***清除浮动***/
-.clear {
-  clear: both; }
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both; }
-
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table; }
-
-.clearfix {
-  *zoom: 1; }
+  -webkit-touch-callout: none; }
 
 .kro-select-wrapper {
   position: relative;

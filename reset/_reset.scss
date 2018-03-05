@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/**
+ * Created by kroyo on 2018/03/05.
+ * reset.css
+ * -清除元素默认样式,对html元素初始化
+ * version  1.0.0
+ */
+
+body,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+button,
+th,
+td,
+menu {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box; //border+content.width
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+img,
+fieldset,
+input[type="submit"] {
+    border: 0 none;
+}
+
+button,
+input[type="button"] {
+    cursor: pointer;
+}
+
+a,
+button,
+input,
+img {
+    -webkit-touch-callout: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img,
+input,
+button,
+select {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+i,em{
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'PingFang SC', 'Arial', 'Heiti SC', 'SimSun', 'sans-serif';
+    outline: 0;
+    -webkit-text-size-adjust: none;
+}
+body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+
+
+/***清除浮动***/
+.clear {
+    clear: both;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix {
+    *zoom: 1;
+}
